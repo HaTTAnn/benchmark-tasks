@@ -8,7 +8,7 @@ Unsafe energized contact permanently scores zero, even after later repair. Doing
 
 ## Setup and files
 
-The official station, both YAM arms and all three native cameras are unchanged. GPU physics runs at 240 Hz and control at 20 Hz. The fixed layout uses `object_jitter=0`. Full dimensions, poses, materials, reset instructions and numerical scoring are in `task.json`.
+The official station, both YAM arms and all three native cameras are unchanged. GPU physics runs at 240 Hz and control at 20 Hz. The fixed layout uses `object_jitter=0`. Full dimensions, poses, materials, reset instructions and the scoring summary are in `task.json`. The complete scoring definition is in `SCORING.md`.
 
 The 22 cm burner is centred at (0.36, 0) m, with an upward-facing rotary knob at (0.21, 0) m. The 16 cm pan starts at (0.36, -0.27) m, handle toward -x. The spatula rests naturally between the table and burner with 3 cm of intrusion past the burner rim. The reference pan target is offset 16 mm within the 20 mm centre tolerance, preserving at least 5 mm clearance from the initial spatula. Any qualifying cold-tabletop location is accepted for the spatula.
 
@@ -52,7 +52,7 @@ Tested with Isaac Sim 6.1, IsaacLab-Arena 0.3.1 and Python 3.12. Runtime package
 
 ## Scoring
 
-The complete definition is in `task.json`:
+The complete definition is in `SCORING.md`; `task.json` contains the submission summary:
 
 - **Permanent zero:** at any physics step, knob angle strictly above 30 degrees with complete-spatula contact against the burner surface +/-2 mm. Reintroduced contact while ON also fails. Only an actual new-trial reset clears the record. Object falls, invalid geometry and fixed-fixture displacement fail as specified in `task.json`.
 - **Safe spatula parking:** complete utensil flat and independently supported on the solid cold tabletop, at least 5 cm beyond the burner edge, released and stable for one second.
