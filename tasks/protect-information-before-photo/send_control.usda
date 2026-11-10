@@ -1,0 +1,46 @@
+#usda 1.0
+(
+    defaultPrim = "SendControl"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "SendControl"
+{
+    def Xform "base" (
+        prepend apiSchemas = ["PhysicsArticulationRootAPI"]
+        prepend references = @control_base.usda@
+    )
+    {
+    }
+
+    def Xform "cap" (
+        prepend apiSchemas = ["PhysicsMassAPI"]
+        prepend references = @control_cap.usda@
+    )
+    {
+        float physics:mass = 0.025
+    }
+
+    def PhysicsFixedJoint "fixed"
+    {
+        rel physics:body0 = </SendControl>
+        rel physics:body1 = </SendControl/base>
+    }
+
+    def PhysicsPrismaticJoint "press" (
+        prepend apiSchemas = ["PhysicsDriveAPI:linear"]
+    )
+    {
+        float drive:linear:physics:damping = 2
+        float drive:linear:physics:maxForce = 20
+        float drive:linear:physics:stiffness = 300
+        float drive:linear:physics:targetPosition = 0
+        uniform token drive:linear:physics:type = "force"
+        uniform token physics:axis = "Z"
+        rel physics:body0 = </SendControl/base>
+        rel physics:body1 = </SendControl/cap>
+        float physics:lowerLimit = -0.006
+        float physics:upperLimit = 0
+    }
+}

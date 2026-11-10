@@ -1,0 +1,23 @@
+{
+  "product": {
+    "registry": "mug_ycb_robolab",
+    "source_url": "https://omniverse-content-staging.s3-us-west-2.amazonaws.com/Assets/Isaac/6.0/Isaac/IsaacLab/Arena/assets/object_library/srl_robolab_assets/objects/ycb/mug.usd",
+    "usage": "Existing library mesh normalised to 125 mm horizontal extent and saved as product.usda for offline loading; topology preserved",
+    "appearance": "Original textures replaced with plain teal material",
+    "collision": "Convex hull fills the opening and handle hole; demonstration does not grasp the mug",
+    "licensing_status": "MIT; normalized vertices and face indices matched the upstream RoboLab YCB mug. Original notice retained in licenses/YCB-Video-MIT.txt.",
+    "license": "MIT",
+    "license_url": "https://github.com/NVlabs/RoboLab/blob/main/assets/objects/ycb/LICENSE",
+    "upstream_mesh_url": "https://github.com/NVlabs/RoboLab/blob/main/assets/objects/ycb/mug.usd",
+    "upstream_usd_sha256": "1a0233d9a6494c37d64796ab717d9cafcc32f229d99de1666e69b4402c5c6292",
+    "verified_vertex_count": 16763
+  },
+  "authored": [
+    "clipboard mesh",
+    "fictional cost-sheet artwork",
+    "rigid document-folder cover with raised spine",
+    "spring-return physical send control",
+    "photographic surface"
+  ],
+  "helpers": "scenekit.py and usdkit.py reused from the local competition task template"
+}
