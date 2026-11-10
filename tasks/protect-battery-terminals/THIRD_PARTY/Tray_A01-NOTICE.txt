@@ -1,0 +1,4 @@
+Tray_A01 geometry from NVIDIA SimReady Isaac 6.0, CC BY 4.0.
+Source: https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/6.0/Isaac/SimReady/Residential/Kitchen/Cooking_Gear/Tray_A01/sm_kitchenware_tray_a01_01.usd
+Mesh: /RootNode/Geometry/sm_kitchenware_tray_a01_obj_00/sm_kitchenware_tray_a01_mesh_00/sm_kitchenware_tray_a01_mesh_00
+Modifications: triangulated original faces; scaled x=1.26, y=1.10, z=0.30; recentered the outer xy bounds and placed the lowest surface on z=0; replaced original materials with a uniform blue coated-metal material; added parking outlines. Exact triangle collision copy preserves the open, rounded and flared geometry.
